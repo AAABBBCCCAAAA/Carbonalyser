@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Carbonalyser",
   "description": "Analyse Internet usage carbon footprint",
-  "author": "TheShiftProject",
+  "author": "AAABBBCCCAAAA",
   "version": "1.2.10",
   "icons": {
     "48": "icons/icon-off-48.png"
@@ -10,10 +10,12 @@
   "permissions": [
     "storage",
     "webRequest",
-    "<all_urls>",
     "downloads",
     "tabs",
     "geolocation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "background": {
     "scripts": [
@@ -32,7 +34,7 @@
       "background/periodicDownload.js"
     ]
   },
-  "browser_action": {
+  "action": {
     "browser_style": true,
     "default_popup": "popup/popup.html",
     "default_icon": {
@@ -40,5 +42,13 @@
     }
   },
   "default_locale": "en",
-  "devtools_page": "devtools/loader.html"
+  "devtools_page": "devtools/loader.html",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "AAABBBCCCAAAA@protonmail.com"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src *"
+  }
 }
